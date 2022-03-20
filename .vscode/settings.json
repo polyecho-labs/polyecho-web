@@ -11,5 +11,6 @@
   },
   "[typescriptreact]":  {
     "editor.formatOnSave":  false
-  }
+  },
+  "jest.jestCommandLine": "jest"
 }
