@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { INft, INftDoc, Nft } from '../../../models/nft.model'
 import dbConnect from '../../../utils/db'
 import { update } from '../../../utils/http'
+import { withSentry } from '@sentry/nextjs'
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
 	const { method, body } = req
@@ -67,4 +68,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	}
 }
 
-export default handler
+export default withSentry(handler)

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { IUser, User } from '../../../models/user.model'
 import dbConnect from '../../../utils/db'
+import { withSentry } from '@sentry/nextjs'
 
 export type CreateUserPayload = {
 	address: string
@@ -58,4 +59,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	}
 }
 
-export default handler
+export default withSentry(handler)

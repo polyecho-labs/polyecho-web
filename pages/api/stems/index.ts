@@ -3,6 +3,7 @@ import type { IStemDoc } from '../../../models/stem.model'
 import { Stem } from '../../../models/stem.model'
 import dbConnect from '../../../utils/db'
 import { update } from '../../../utils/http'
+import { withSentry } from '@sentry/nextjs'
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
 	const { body, method } = req
@@ -40,4 +41,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	}
 }
 
-export default handler
+export default withSentry(handler)

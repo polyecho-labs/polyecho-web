@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { IProject, IProjectDoc, Project } from '../../../models/project.model'
 import dbConnect from '../../../utils/db'
 import { update } from '../../../utils/http'
+import { withSentry } from '@sentry/nextjs'
 
 export type CreateProjectPayload = {
 	createdBy: string
@@ -58,4 +59,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	}
 }
 
-export default handler
+export default withSentry(handler)

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import logger from '../utils/logger'
 
 export const MONGODB_URI = process.env.MONGODB_URI || ''
 
@@ -19,6 +20,7 @@ if (!cached) {
 
 async function dbConnect() {
 	if (cached.conn) {
+		logger.magenta(`Connected to MongoDB at ${MONGODB_URI}`)
 		return cached.conn
 	}
 
@@ -28,12 +30,21 @@ async function dbConnect() {
 		}
 
 		cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
-			console.info(`Connected to MongoDB at ${MONGODB_URI}`)
+			logger.magenta(`Connected to MongoDB at ${MONGODB_URI}`)
 			return mongoose
 		})
 	}
 	cached.conn = await cached.promise
 	return cached.conn
+}
+
+export const config = {
+	api: {
+		bodyParser: {
+			sizeLimit: '100mb',
+			responseLimit: false,
+		}
+	}
 }
 
 export default dbConnect

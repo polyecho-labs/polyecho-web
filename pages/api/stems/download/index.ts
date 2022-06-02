@@ -4,6 +4,7 @@ import path from 'path'
 import fs from 'fs'
 import downloadURL, { zipDirectory } from '../../../../utils/downloadURL'
 import logger from '../../../../utils/logger'
+import { withSentry } from '@sentry/nextjs'
 
 /**
  * Takes in a URL to download from and writes the file to a stream
@@ -80,4 +81,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 	}
 }
 
-export default handler
+export default withSentry(handler)
