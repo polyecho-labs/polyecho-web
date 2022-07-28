@@ -2988,10 +2988,10 @@
   resolved "https://registry.yarnpkg.com/@types/underscore/-/underscore-1.11.4.tgz#62e393f8bc4bd8a06154d110c7d042a93751def3"
   integrity sha512-uO4CD2ELOjw8tasUrAhvnn2W4A0ZECOvMjCivJr4gA9pGgjv+qxKWY9GLTMVEK8ej85BxQOocUyE7hImmSQYcg==
 
-"@types/wavesurfer.js@^6.0.0":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@types/wavesurfer.js/-/wavesurfer.js-6.0.2.tgz#57338e098ea741d6ae9a8da4d5c7ff1c5654e8b9"
-  integrity sha512-sFj42zpl0qO1vTF+/YTXkLkk9WI7FsuSjUpW2/lLLX0riJzP4LTm0+30rYUAgKfE+JDpy7bpfKE7YHfWf3P6Gw==
+"@types/wavesurfer.js@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@types/wavesurfer.js/-/wavesurfer.js-6.0.3.tgz#92c26804700475d9273e91ee683a2ba17c50ac2d"
+  integrity sha512-5Sb5s3pEkOmDosaaP1DWp1Unnx8HhVorm5608TIVdT5jCMvJ6eqM19UD8n7DEbJ7rzreS9RqHmzR8TlcdQBvbA==
   dependencies:
     "@types/debounce" "*"
 
@@ -14258,10 +14258,10 @@ wasmcurves@0.1.0:
     big-integer "^1.6.42"
     blakejs "^1.1.0"
 
-wavesurfer.js@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.npmjs.org/wavesurfer.js/-/wavesurfer.js-5.2.0.tgz"
-  integrity sha512-SkPlTXfvKy+ZnEA7f7g7jn6iQg5/8mAvWpVV5vRbIS/FF9TB2ak9J7VayQfzfshOLW/CqccTiN6DDR/fZA902g==
+wavesurfer.js@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/wavesurfer.js/-/wavesurfer.js-6.2.0.tgz#47b2c2006d8780749fd88ef372a1ec84f886ad5a"
+  integrity sha512-yuOteX+RKgJl4p5V+YNflm79QRNFWpNo0UHtKaGf1G05qMNChfbcJU0MZYL7+OJTHgYszYqN3dgUXjugYd/Iew==
 
 web-encoding@1.1.5:
   version "1.1.5"
