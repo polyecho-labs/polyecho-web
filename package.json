@@ -41,7 +41,7 @@
     "json-bigint": "^1.0.0",
     "jszip": "^3.10.0",
     "lodash": "^4.17.21",
-    "mongoose": "^6.3.4",
+    "mongoose": "^6.5.0",
     "newrelic": "^8.14.1",
     "next": "12.2.0",
     "nextjs-progressbar": "^0.0.14",
